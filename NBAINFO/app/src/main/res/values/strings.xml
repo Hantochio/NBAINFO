@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NBA INFO</string>
+    <string name="action_buscar">saindo</string>
+    <string name="action_atualizar">atualizando</string>
+    <string name="action_config">Configurações</string>
+    <string name="action_sair">Saindo</string>
+</resources>
