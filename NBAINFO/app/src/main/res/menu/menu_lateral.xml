@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_warriors"
+            android:icon="@drawable/warriors_logo"
+            android:title="@string/nav_warriors"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/nav_lakers"
+            android:icon="@drawable/logo_lakers"
+            android:title="@string/nav_lakers"
+            />
+        <item
+            android:id="@+id/nav_heat"
+            android:icon="@drawable/logo_heat"
+            android:title="@string/nav_heat"
+            />
+
+        <item
+            android:id="@+id/sair_da_tela"
+            android:icon="@drawable/icone_sairdatela"
+            android:title="Sair"
+            />
+
+
+    </group>
+
+
+
+</menu>
