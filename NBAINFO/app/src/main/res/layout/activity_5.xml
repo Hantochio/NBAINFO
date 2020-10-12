@@ -27,4 +27,31 @@
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="invisible"/>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerJogadores"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"
+
+                />
+
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

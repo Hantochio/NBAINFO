@@ -7,6 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_3.*
 
 class Activity4 : AppCompatActivity() {
@@ -16,6 +18,26 @@ class Activity4 : AppCompatActivity() {
 
         supportActionBar?.title = "Lakers"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        recyclerJogadores?.layoutManager = LinearLayoutManager(this)
+        recyclerJogadores?.itemAnimator = DefaultItemAnimator()
+        recyclerJogadores?.setHasFixedSize(true)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        taskJogadores()
+    }
+
+    var jogadores = listOf<Jogadores>()
+
+    fun taskJogadores(){
+        this.jogadores = JogadoresService.getJogadores()
+        recyclerJogadores?.adapter = JogadoresAdapter (this.jogadores) {onClickJogadores(it)}
+    }
+
+    fun onClickJogadores(jogadores: Jogadores){
 
     }
 

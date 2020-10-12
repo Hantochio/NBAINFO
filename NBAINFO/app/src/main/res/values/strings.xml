@@ -4,4 +4,10 @@
     <string name="action_atualizar">atualizando</string>
     <string name="action_config">Configurações</string>
     <string name="action_sair">Saindo</string>
+    <string name="nav_times">Times</string>
+    <string name="nav_warriors">Warriors</string>
+    <string name="nav_lakers">Lakers</string>
+    <string name="nav_heat">Heat</string>
+    <string name="nav_abrir">Abrir</string>
+    <string name="nav_fechar">Fechar</string>
 </resources>
