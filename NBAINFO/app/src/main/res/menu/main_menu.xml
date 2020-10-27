@@ -7,6 +7,14 @@
         android:title="@string/action_sair"
         app:showAsAction="always"
         android:icon="@drawable/icone_sairdatela"/>
+
+    <item
+        android:id="@+id/action_nova"
+        android:icon="@drawable/ic_adicionar_black"
+        android:title="@string/action_nova"
+
+        />
+
     <item
         android:id="@+id/action_atualizar"
         android:icon="@drawable/ic_atualizar_black"

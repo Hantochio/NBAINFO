@@ -32,9 +32,17 @@ class Activity4 : AppCompatActivity() {
 
     var jogadores = listOf<Jogadores>()
 
-    fun taskJogadores(){
-        this.jogadores = JogadoresService.getJogadores()
-        recyclerJogadores?.adapter = JogadoresAdapter (this.jogadores) {onClickJogadores(it)}
+    fun taskJogadores() {
+        Thread {
+            this.jogadores = JogadoresService.getJogadores()
+
+            runOnUiThread {
+                recyclerJogadores?.adapter =
+                    JogadoresAdapter(this.jogadores) {
+                        onClickJogadores(it)
+                    }
+            }
+        }.start()
     }
 
     fun onClickJogadores(jogadores: Jogadores){
