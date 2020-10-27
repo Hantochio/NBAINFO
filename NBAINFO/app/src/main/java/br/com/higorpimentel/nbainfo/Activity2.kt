@@ -22,6 +22,9 @@ class Activity2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
 
+        val professor = Prefs.getString("professor")
+        Toast.makeText(this, professor, Toast.LENGTH_LONG).show()
+
         botaozinho2.setOnClickListener {
             val intent: Intent = Intent(this, Activity3::class.java)
             startActivity(intent)
@@ -113,6 +116,11 @@ class Activity2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         }
         else if (id == android.R.id.home) {
             finish()
+        }
+
+        else if (id == R.id.action_nova){
+            val intent: Intent = Intent(this, NovoTime::class.java)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }
