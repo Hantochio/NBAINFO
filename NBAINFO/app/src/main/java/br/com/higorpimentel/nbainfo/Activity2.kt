@@ -84,6 +84,11 @@ class Activity2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                 startActivity(intent)
 
             }
+            R.id.nav_localizacao -> {
+                val intent: Intent = Intent(this, MapasActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
         layoutMenuLateral.closeDrawer(GravityCompat.START)
@@ -124,4 +129,7 @@ class Activity2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+
 }

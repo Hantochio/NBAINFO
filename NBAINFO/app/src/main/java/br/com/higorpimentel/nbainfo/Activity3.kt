@@ -42,9 +42,18 @@ class Activity3 : AppCompatActivity() {
                     JogadoresAdapter(this.jogadores) {
                         onClickJogadores(it)
                     }
+                enviaNotificacao(this.jogadores[0])
             }
         }.start()
     }
+
+    fun enviaNotificacao(jogadores: Jogadores) {
+        val intent = Intent(this, Activity3::class.java)
+        intent.putExtra("jogador", jogadores)
+
+        NotificationUtil.create(1, intent, "NBAINFO", "Golden State Warriors ${jogadores.nome}")
+    }
+
 
     fun onClickJogadores(jogadores: Jogadores){
 

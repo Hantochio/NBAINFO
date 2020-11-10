@@ -25,6 +25,13 @@
             android:title="Sair"
             />
 
+        <item
+            android:id="@+id/nav_localizacao"
+            android:icon="@drawable/ic_buscar_black"
+            android:title="Localização"
+            
+            />
+
 
     </group>
 
